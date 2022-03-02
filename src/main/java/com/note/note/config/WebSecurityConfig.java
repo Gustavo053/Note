@@ -58,10 +58,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()
-                .defaultSuccessUrl("/dashboard")
-//                .successHandler((request, response, authentication) -> {
+                .successHandler((request, response, authentication) -> {
+                    response.sendRedirect("/dashboard");
 //                    response.sendRedirect("/verify-first-login");
-//                })
+                })
         .and()
                 .logout()
                 .invalidateHttpSession(true)

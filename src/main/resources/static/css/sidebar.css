@@ -1,0 +1,9 @@
+.sidebar-general {
+    text-align: center;
+    width: 15%;
+    background: #6c757d;
+}
+
+.sidebar-general ul {
+    list-style: none;
+}
